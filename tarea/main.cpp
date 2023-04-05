@@ -14,13 +14,12 @@ int main(){
     Matriz2D m2(3);
     Matriz2D m3(4,7);
 
-    cout << m1;
+    cout << m2;
     cout << '\n';
     
-    Matriz2D m4 = m1;
+    Matriz2D m6 = t(m2);
 
-    cout << m4 << endl;
+    cout << m6 << endl;
 
-
-
+   
 }

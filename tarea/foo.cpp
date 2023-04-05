@@ -56,10 +56,32 @@ Matriz2D::Matriz2D(const Matriz2D& m){
 
 Matriz2D::Matriz2D(Matriz2D&& m){
     // Constructor de movimiento
+    filas = m.filas;
+    columnas = m.columnas;
+    ptr = new float*[filas];
+    for(int i = 0; i < filas; i++){
+        ptr[i] = new float[columnas];
+        for(int j = 0; j < columnas; j++){
+            ptr[i][j] = m.ptr[i][j];
+        }
+    }
+
+    m.columnas = 0;
+    m.filas = 0;
+    m.ptr = nullptr;
+
 }
 
 Matriz2D t(Matriz2D& m){
     // Transpuesta de una matriz
+    Matriz2D m2 (m.filas, m.columnas);
+    for(int i = 0; i < m.filas; i++){
+        for(int j = 0; j < m.columnas; j++){
+            m2.ptr[i][j] = m.ptr[j][i];
+        }
+        cout << endl;
+    }
+    return m2;
 }
 
 std::ostream& operator<<(std::ostream& os, const Matriz2D& m){
