@@ -11,9 +11,15 @@
 int main(){
 
     Matriz2D m1(5,6);
-    Matriz2D m2 = t(m1);
-    cout << m2;
-    cout << m2.getFilas();
-    cout << m2.getColumnas() ;
+    Matriz2D m2 = m1;
+
+    cout << m1 << endl;
+    cout << m2 << endl;
+
+    cout << t(m2) << endl;
+
+    Matriz2D m3 = m1 * t(m2);
+
+    cout << m3 << endl;
    
 }

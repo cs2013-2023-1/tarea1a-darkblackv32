@@ -120,7 +120,10 @@ Matriz2D operator*(const Matriz2D& m1, const Matriz2D& m2){
     Matriz2D m3(m1.filas, m2.columnas);
     for(int i = 0; i < m1.filas; i++){
         for(int j = 0; j < m2.columnas; j++){
-            m3.ptr[i][j] = m1.ptr[i][j] * m2.ptr[i][j];
+            m3.ptr[i][j] = 0;
+            for(int k = 0; k < m1.filas; k++){
+                m3.ptr[i][j] = m1.ptr[i][j] * m2.ptr[i][j];
+            }
         }
     }
     return m3;
