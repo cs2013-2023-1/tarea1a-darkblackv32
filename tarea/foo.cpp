@@ -74,12 +74,11 @@ Matriz2D::Matriz2D(Matriz2D&& m){
 
 Matriz2D t(Matriz2D& m){
     // Transpuesta de una matriz
-    Matriz2D m2 (m.filas, m.columnas);
-    for(int i = 0; i < m.filas; i++){
-        for(int j = 0; j < m.columnas; j++){
+    Matriz2D m2(m.columnas, m.filas);
+    for(int i = 0; i < m.columnas; i++){
+        for(int j = 0; j < m.filas; j++){
             m2.ptr[i][j] = m.ptr[j][i];
         }
-        cout << endl;
     }
     return m2;
 }

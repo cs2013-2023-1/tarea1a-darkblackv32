@@ -10,16 +10,10 @@
 // Puede validar su codigo con la siguiente funcion main
 int main(){
 
-    Matriz2D m1;
-    Matriz2D m2(3);
-    Matriz2D m3(4,7);
-
+    Matriz2D m1(5,6);
+    Matriz2D m2 = t(m1);
     cout << m2;
-    cout << '\n';
-    
-    Matriz2D m6 = t(m2);
-
-    cout << m6 << endl;
-
+    cout << m2.getFilas();
+    cout << m2.getColumnas() ;
    
 }
