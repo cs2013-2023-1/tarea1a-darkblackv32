@@ -8,7 +8,7 @@ Matriz2D::Matriz2D(){
     for(int i = 0; i < 3; i++){
             ptr[i] = new float[3];
             for(int j = 0; j < 3; j++){
-                ptr[i][j] = 0.2;
+                ptr[i][j] = rand()%(10-1) / 10;
             }
     }
     
@@ -22,7 +22,7 @@ Matriz2D::Matriz2D(int n){
     for(int i = 0; i < filas; i ++){
         ptr[i] = new float[columnas];
         for(int j = 0; j < columnas; j++){
-            ptr[i][j] = 0.3;
+            ptr[i][j] = rand()%(10-1) / 10;
         }
     }
 }
@@ -35,10 +35,9 @@ Matriz2D::Matriz2D(int n, int m){
     for(int i = 0; i < filas; i++){
         ptr[i] = new float[columnas];
         for(int j = 0; j < columnas; j++){
-            ptr[i][j] = 0.2;
+            ptr[i][j] = rand()%(10-1) / 10;
         }
     }
-
 }
 
 Matriz2D::Matriz2D(const Matriz2D& m){
