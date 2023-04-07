@@ -1,7 +1,7 @@
 # :wave: PROGRAMACION III: TAREA 1A
 
 - Apellidos: *Soldi Cataño*
-- Nombres: Angello Giovanni*
+- Nombres: Angello Giovanni
 - Sección: *1.01*
 
 En la presente tarea usted debe **modificar/completar** los archivos dentro de la carpeta <tt>tarea</tt>.
